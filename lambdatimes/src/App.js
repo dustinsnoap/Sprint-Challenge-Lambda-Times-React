@@ -18,6 +18,7 @@ const App = () => {
 
 export default authenticate(App);
 
+//Add Global Styles
 injectGlobal`
   @font-face {
     font-family: 'PT Sans';

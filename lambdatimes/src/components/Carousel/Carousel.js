@@ -12,11 +12,12 @@ export default class Carousel extends Component {
     }
   }
   componentDidMount(){
-    this.setState({data: carouselData})
+    this.setState({data: carouselData}) //store date once component is mounted
     setInterval(this.rightClick, 4200) //auto-scroll every 4.2 seconds
   }
 
   leftClick = () => {
+    //decrement the index
     this.setState(prevState => {
       let index = prevState.index
       if(index <= 0) index = prevState.data.length - 1
@@ -27,6 +28,7 @@ export default class Carousel extends Component {
     })
   }
   rightClick = () => {
+    //increment the index
     this.setState(prevState => {
       let index = prevState.index
       if(index >= prevState.data.length - 1) index = 0

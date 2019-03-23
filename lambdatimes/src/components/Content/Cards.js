@@ -7,6 +7,7 @@ import Card from './Card';
 const Cards = props => {
   return (
     <CARDS>
+      {/* Map through cards */}
       {props.cards.map(c => <Card card={c} key={c.headline}/>)}
     </CARDS>
   )

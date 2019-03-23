@@ -10,14 +10,16 @@ const authenticate = App =>
             }
         }
         componentDidMount() {
+            //check for locally stored street cred
             const usr = localStorage.getItem('username')
             const pwd = localStorage.getItem('password')
             if(usr && pwd) this.setState({loggedIn: true})
             else this.setState({loggedIn: false})
         }
         render() {
-            if(this.state.loggedIn) return <App />
-            else return <Login />
+            //if user has street cred show them the content
+            //otherwise hit them with a login screen
+            return this.state.loggedIn ? <App /> : <Login />
         }
     }
 

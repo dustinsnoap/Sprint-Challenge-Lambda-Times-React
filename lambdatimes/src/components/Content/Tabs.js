@@ -9,6 +9,7 @@ const Tabs = props => {
     <TABS>
       <TOPICS>
         <TITLE>TRENDING TOPICS:</TITLE>
+        {/* Map through tabs */}
         {props.tabs.map(t =>
           <Tab 
             tab={t}
