@@ -4,14 +4,24 @@ import styled from 'styled-components'
 const Header = () => {
   return (
     <HEADER>
-      <span className="date">SMARCH 32, 2018</span>
+      <DATE>SMARCH 32, 2018</DATE>
       <h1>Lambda Times</h1>
-      <span className="temp">98°</span>
+      <TEMP>98°</TEMP>
     </HEADER>
   )
 }
 
 export default Header
+
+const DATE = styled.span`
+  margin-left: 25px;
+  flex: 1;
+`
+const TEMP = styled.span`
+  text-align: right;
+  margin-right: 25px;
+  flex: 1;
+`
 
 const HEADER = styled.div`
   display: flex;
@@ -42,14 +52,5 @@ const HEADER = styled.div`
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 1px;
-  }
-  .date {
-    margin-left: 25px;
-    flex: 1;
-  }
-  .temp {
-    text-align: right;
-    margin-right: 25px;
-    flex: 1;
   }
 `

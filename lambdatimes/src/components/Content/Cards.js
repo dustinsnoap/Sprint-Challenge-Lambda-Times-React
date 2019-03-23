@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import Card from './Card';
 
 const Cards = props => {
   return (
-    <div className="cards-container">
+    <CARDS>
       {props.cards.map(c => <Card card={c} key={c.headline}/>)}
-    </div>
+    </CARDS>
   )
 }
 
@@ -16,3 +17,17 @@ Cards.propTypes = {
 }
 
 export default Cards;
+
+const CARDS = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: none;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  
+  @media (min-width: 1200px) {
+      width: 1200px;
+  }
+`
