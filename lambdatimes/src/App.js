@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, {injectGlobal} from 'styled-components'
+import authenticate from './components/Authentication/authentication'
 
 import TopBar from './components/TopBar'
 import Header from './components/Header'
@@ -15,7 +16,7 @@ const App = () => {
   );
 }
 
-export default App;
+export default authenticate(App);
 
 injectGlobal`
   @font-face {

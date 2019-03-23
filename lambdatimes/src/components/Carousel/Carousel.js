@@ -13,7 +13,7 @@ export default class Carousel extends Component {
   }
   componentDidMount(){
     this.setState({data: carouselData})
-    setInterval(this.rightClick, 4200)
+    setInterval(this.rightClick, 4200) //auto-scroll every 4.2 seconds
   }
 
   leftClick = () => {
